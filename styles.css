@@ -1,0 +1,193 @@
+/* GENERAL STYLING */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+/* GENERAL STYLING */
+
+/* NAV AND LOGO */
+.logo {
+  font-size: 2.5rem;
+  color: rgb(184, 15, 15);
+  font-weight: 700;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3em;
+}
+
+#nav-and-logo {
+  max-width: 144rem;
+  padding: 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: url("./assets/menu.svg") no-repeat center center/cover;
+  display: none;
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  background: url("./assets/close.svg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5rem;
+}
+
+.mobile-nav {
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: all 1s ease-in-out;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.mobile-links {
+  font-size: 2.5rem;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 5rem;
+}
+
+.svg {
+  filter: invert(100%) sepia(0%) saturate(5598%) hue-rotate(108deg)
+    brightness(128%) contrast(110%);
+  object-fit: cover;
+}
+
+.mobile-visible {
+  transform: translateX(0);
+}
+/* NAV AND LOGO */
+
+/* SECTION INTRO */
+.main-title {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.intro {
+  margin: 20rem 0;
+}
+
+.intro p {
+  margin-top: 2em;
+  max-width: 90rem;
+}
+/* SECTION INTRO */
+
+/* SECTION FLEX */
+#flex h3 {
+  font-size: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+#flex h3::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 0.15em;
+  top: 4.5rem;
+  left: 0;
+  background-color: rgb(184, 15, 15);
+}
+
+.card {
+  flex-basis: 30rem;
+  flex-grow: 1;
+  height: 30rem;
+  background-color: antiquewhite;
+}
+
+.card-container {
+  display: flex;
+  gap: 8em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100rem;
+  margin: 5em auto;
+}
+/* SECTION FLEX */
+
+footer {
+  background-color: rgb(184, 15, 15);
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  padding: 1em;
+}
+
+@media (max-width: 710px) {
+  html {
+    font-size: 55%;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  .box {
+    display: block;
+  }
+
+  .intro {
+    margin: 5rem 0;
+  }
+
+  /* .card-container {
+    flex-direction: column;
+    align-items: stretch;
+  } */
+}
